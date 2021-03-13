@@ -2,8 +2,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/index')
-def index():
+@app.route('/')
+def main_page():
     return render_template('index.html')
 
 @app.route('/about-us')
@@ -17,10 +17,6 @@ def contact():
 @app.route('/integration')
 def integration():
     return render_template('integration.html')
-
-@app.route('/main')
-def main_page():
-    return render_template('main.html')
 
 @app.route('/product-details')
 def product_details():
